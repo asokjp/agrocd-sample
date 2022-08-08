@@ -16,22 +16,22 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld-v1
+  name: helloworld-v2
   namespace: default
   labels:
     app: helloworld
-    version: v1
+    version: v2
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: helloworld
-      version: v1
+      version: v2
   template:
     metadata:
       labels:
         app: helloworld
-        version: v1
+        version: v2
     spec:
       containers:
       - name: helloworld
